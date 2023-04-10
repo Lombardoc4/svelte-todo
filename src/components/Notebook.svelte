@@ -37,8 +37,10 @@
     {#if addNew}
         <label for="noteTitle">Title</label>
         <input type="text" id="noteTitle" placeholder="Title"/>
+        
         <label for="noteContent">Content</label>
         <textarea id="noteContent"/>
+        
         <button on:click={saveNote}>Save</button>
     {/if}
     
