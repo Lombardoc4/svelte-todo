@@ -30,7 +30,7 @@ jobs:
         env:
           BASE_PATH: '/your-repo-name'
         run: |
-          npm run build --base='crislombardo.com/svelte-todo/'
+          npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
