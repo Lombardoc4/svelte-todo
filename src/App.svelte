@@ -1,8 +1,9 @@
 <script>
-	import TodoList from "../components/TodoList.svelte";
+	import TodoList from "./components/TodoList.svelte";
     import { onMount } from 'svelte';
-	import SliderSelector from "../components/SliderSelector.svelte";
-	import Notebook from "../components/Notebook.svelte";
+	import SliderSelector from "./components/SliderSelector.svelte";
+	import Notebook from "./components/Notebook.svelte";
+	import Disclaimer from "./components/Disclaimer.svelte";
 
     
     let uiView = 'list';
@@ -68,18 +69,21 @@
     
 </script>
 
+<Disclaimer />
 <main>
- 
     <div class="sidebar">
         <h1>Welcome</h1>
         {#if !loading}
         
             
-            {#if uiView !== 'notes'}
             <button on:click={toggleUI}>
+              {#if uiView !== 'notes'}
                 View Notes
+              {:else}
+                View Todos
+              {/if}
             </button>
-            {/if}
+            
             
             {#if categories.length > 1 || uiView === 'notes'}
                 <div class="categories">
