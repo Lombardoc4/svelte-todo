@@ -30,7 +30,7 @@ jobs:
         env:
           BASE_PATH: '/your-repo-name'
         run: |
-          npm run build
+          npm run build --base=${{ steps.deployment.outputs.page_url }}
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
