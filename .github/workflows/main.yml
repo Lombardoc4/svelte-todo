@@ -30,7 +30,7 @@ jobs:
         env:
           BASE_PATH: '/your-repo-name'
         run: |
-          npm run build --base=${{ steps.deployment.outputs.page_url }}/${{github.event.repository.name}}
+          npm run build --base=${{ steps.deployment.outputs.page_url /  github.event.repository.name}}
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
